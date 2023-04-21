@@ -1,0 +1,16 @@
+#photocard{
+    overflow: hidden;
+}
+img{
+    margin-left: 500px;
+    animation: fromLeft 3s forwards;
+}
+
+@keyframes fromLeft {
+    0%{
+        margin-left: 500px;
+    }
+    100%{
+        margin-left: 0;
+    }
+} 
