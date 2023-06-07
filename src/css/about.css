@@ -1,0 +1,128 @@
+.section-title {
+  width: fit-content;
+  margin-bottom: 0;
+  padding-bottom: 3px;
+  border-bottom: 3px solid #616571;
+  color: #93deff;
+}
+
+.section-title-side {
+  color: #93deff;
+  width: fit-content;
+  padding: 0;
+  padding-right: 5px;
+  border-right: 3px solid #616571;
+}
+
+@media only screen and (max-width: 991px) {
+  .section-title-side {
+    color: #93deff;
+    width: fit-content;
+    padding: 0;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #616571;
+    border-right: none;
+  }
+}
+
+body {
+  background-color: #1a1a1a;
+}
+
+#about {
+  /* margin-left: -15px; */
+  /* transform: translate3d(-10px, 0, 0); */
+  /* border: 1px solid red; */
+  color: #f7f7f7;
+}
+
+.section-img {
+  object-fit: contain;
+  width: 50px;
+  height: 50px;
+  margin-left: -5px;
+  margin-right: 10px;
+}
+
+#left-section {
+  /* margin-left: -15px; */
+  animation: fromLeftA 1s forwards;
+}
+
+#right-section {
+  /* transform: translate3d(-15px, 0, 0); */
+  animation: fromRighta 1s forwards;
+}
+
+.button-view {
+  transform: translate3d(0, -7px, 0);
+  background-color: #93deff;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.button-cv {
+  /* transform: translate3d(10px, 0, 0); */
+  background-color: #93deff;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.button-visit {
+  background-color: #93deff;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+#certifications {
+  /* padding-top: 10px; */
+  animation: fromLeftA 1s forwards;
+}
+
+.certification:nth-child(2) {
+  margin-right: 30px;
+}
+
+.certification div:nth-child(1) {
+  width: 3000px;
+}
+
+.carousel-caption h5 {
+  color: black;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+@keyframes fromLeftA {
+  0% {
+    transform: translate3d(-1300px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fromRighta {
+  0% {
+    transform: translate3d(800px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes toLeftA {
+  0% {
+    transform: translate3d(0px, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1300px, 0, 0);
+  }
+}
+@keyframes toRightA {
+  0% {
+    transform: translate3d(0px, 0, 0);
+  }
+  100% {
+    transform: translate3d(800px, 0, 0);
+  }
+}

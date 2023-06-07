@@ -1,16 +1,25 @@
-#photocard{
-    overflow: hidden;
+#photocard {
+  overflow: hidden;
 }
-img{
-    margin-left: 500px;
-    animation: fromLeft 3s forwards;
+#photocard img {
+  margin-left: 0px;
+  animation: fromLeftPc 1s forwards;
 }
 
-@keyframes fromLeft {
-    0%{
-        margin-left: 500px;
-    }
-    100%{
-        margin-left: 0;
-    }
-} 
+@keyframes fromLeftPc {
+  0% {
+    transform: translate3d(400px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes toLeftPc {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(400px, 0, 0);
+  }
+}

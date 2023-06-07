@@ -1,0 +1,107 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+#contact {
+  color: white;
+}
+
+.top-box {
+  /* border: 1px solid red; */
+  width: 70vw;
+  border-bottom: 3px solid rgba(97, 101, 113, 1);
+  box-sizing: border-box;
+  overflow: hidden;
+  padding-bottom: 7px;
+  animation: fadeInC 1s forwards;
+}
+
+.top-box h1 {
+  animation: fromBottomC 1s forwards;
+}
+
+.bottom-box {
+  /* border: 1px solid red; */
+  width: 70vw;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.bottom-box-content {
+  padding-top: 10px;
+  animation: fromTopC 1s forwards;
+  font-size: 1.2em;
+}
+
+.bottom-box a {
+  text-decoration: none;
+  color: white;
+}
+
+@keyframes fromBottomC {
+  0% {
+    transform: translate3d(0, 130%, 0);
+  }
+  40% {
+    transform: translate3d(0, 130%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes toBottomC {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  60% {
+    transform: translate3d(0, 130%, 0);
+  }
+  100% {
+    transform: translate3d(0, 130%, 0);
+  }
+}
+
+@keyframes fromTopC {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  40% {
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes toTopC {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  60% {
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+@keyframes fadeInC {
+  0% {
+    border-bottom: 3px solid rgba(97, 101, 113, 0);
+  }
+  40% {
+    border-bottom: 3px solid rgba(97, 101, 113, 1);
+  }
+  100% {
+    border-bottom: 3px solid rgba(97, 101, 113, 1);
+  }
+}
+@keyframes fadeOutC {
+  0% {
+    border-bottom: 3px solid rgba(97, 101, 113, 1);
+  }
+  60% {
+    border-bottom: 3px solid rgba(97, 101, 113, 1);
+  }
+  100% {
+    border-bottom: 3px solid rgba(97, 101, 113, 0);
+  }
+}

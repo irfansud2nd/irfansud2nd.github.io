@@ -1,19 +1,30 @@
-#name-card{
-    /* border: 1px solid red; */
-    position: relative;
-    width: 100%;
-    height: 80vh;
+#name-card {
+  /* border: 1px solid red; */
+  position: relative;
+  width: 100%;
+  height: 80vh;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
 @keyframes showTopText {
-  0% { transform: translate3d(0, 100%, 0); }
-  40%, 60% { transform: translate3d(0, 50%, 0); }
-  100% { transform: translate3d(0, 0, 0); }
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(0, 50%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
 }
 @keyframes showBottomText {
-  0% { transform: translate3d(0, -100%, 0); }
-  100% { transform: translate3d(0, 0, 0); }
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
 }
 .animated-title {
   color: #f7f7f7;
@@ -42,24 +53,73 @@
 .animated-title > div.text-top {
   border-bottom: 1vmin solid #616571;
   top: 0;
+  animation: fadeIn 1s forwards;
 }
 .animated-title > div.text-top div {
-  animation: showTopText 1s;
-  animation-delay: 0.5s;
+  animation: showTopText 0.5s;
+  animation-delay: 0.25s;
   animation-fill-mode: forwards;
   bottom: 0;
   transform: translate(0, 100%);
 }
 .animated-title > div.text-top div span:first-child {
-  color: #93DEFF;
+  color: #93deff;
 }
 .animated-title > div.text-bottom {
   bottom: 0;
 }
 .animated-title > div.text-bottom div {
-  animation: showBottomText 0.5s;
-  animation-delay: 1.75s;
+  animation: showBottomText 0.25s;
+  animation-delay: 0.88s;
   animation-fill-mode: forwards;
   top: 0;
   transform: translate(0, -100%);
+}
+
+@keyframes toBottom {
+  0% {
+    transform: translate3d(0, 0%, 0);
+  }
+  20%,
+  40% {
+    transform: translate3d(0, 50%, 0);
+  }
+  80% {
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes toTop {
+  0% {
+    transform: translate3d(0, 0%, 0);
+  }
+  80% {
+    transform: translate3d(0, 0%, 0);
+  }
+  100% {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    border-bottom: 1vmin solid rgba(97, 101, 113, 0);
+  }
+  100% {
+    border-bottom: 1vmin solid rgba(97, 101, 113, 1);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    border-bottom: 1vmin solid rgba(97, 101, 113, 1);
+  }
+  50% {
+    border-bottom: 1vmin solid rgba(97, 101, 113, 1);
+  }
+  100% {
+    border-bottom: 1vmin solid rgba(97, 101, 113, 0);
+  }
 }

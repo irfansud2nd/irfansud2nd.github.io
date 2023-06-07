@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../img/profile1.png";
+import profile from "../img/profile.png";
 import "./../css/photocard.css";
 
 export default function Photocard() {

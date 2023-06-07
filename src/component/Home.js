@@ -10,7 +10,10 @@ export default function Home() {
         <div className="col-md-4 offset-md-1 my-auto">
           <NameCard />
         </div>
-        <div className="col-md-4 offset-md-2 my-auto text-center">
+        <div
+          className="col-md-4 offset-md-2 my-auto text-center"
+          id="photocard"
+        >
           <Photocard />
         </div>
       </div>
