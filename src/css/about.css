@@ -69,14 +69,14 @@ body {
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(2px);
   border-radius: 5px;
-  /* width: fit-content; */
+  width: fit-content;
+  margin: 0 auto;
+  padding: 3px 15px;
 }
 
-#about-me p{
+#about-me p {
   text-align: justify;
 }
-
-
 
 @keyframes fromLeftA {
   0% {

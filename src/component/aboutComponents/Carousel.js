@@ -2,8 +2,37 @@ import React from "react";
 import podomoro from "../../img/podomoro.png";
 import calculator from "../../img/calculator.png";
 import numbers from "../../img/4numbers.png";
+import "../../css/carousel-detail.css";
 
 export default function Carousel() {
+  const showHidden = (event) => {
+    const target = document.getElementById(event.currentTarget.id);
+    const element = document.querySelector(".hidden-test");
+    if (element.classList.contains("showed")) {
+      element.style.animation = "growInverse 1s forwards";
+      setTimeout(() => {
+        element.style.top = `${
+          target.getBoundingClientRect().top + window.scrollY
+        }px`;
+        element.style.left = `${
+          target.getBoundingClientRect().left + window.scrollX
+        }px`;
+        target.style.display = "block";
+        element.classList.toggle("showed");
+      }, 1000);
+    } else {
+      element.style.top = `${
+        target.getBoundingClientRect().top + window.scrollY
+      }px`;
+      element.style.left = `${
+        target.getBoundingClientRect().left + window.scrollX
+      }px`;
+      target.style.display = "none";
+      element.style.animation = "grow 1s forwards";
+      element.classList.toggle("showed");
+    }
+  };
+  window.onresize = console.log("ok");
   return (
     <div>
       <h4 className="mb-3 section-title">Portfolio</h4>
@@ -49,13 +78,29 @@ export default function Carousel() {
               <img src={podomoro} className="d-block w-100" alt="..." />
               <div className="carousel-caption">
                 <h5 style={{ marginBottom: "5px" }}>React Podomoro Timer</h5>
-                <a
+                {/* <a
                   href="https://codepen.io/irfansud2nd/details/PoxoaRq"
                   target="_blank"
                   className="button-visit badge"
                 >
                   Visit on Codepen
-                </a>
+                </a> */}
+                <div
+                  className="button-detail"
+                  id="detail-podomoro"
+                  onClick={showHidden}
+                >
+                  <div className="show">Detail</div>
+                  <div className="hidden">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
+                    cumque vel nihil dolorum veniam? Harum reiciendis, provident
+                    voluptas magnam distinctio nulla dolorem quasi corporis
+                    obcaecati perspiciatis praesentium voluptatibus quia facilis
+                    rem accusantium magni ad ipsum esse optio consequuntur
+                    assumenda beatae suscipit! Praesentium tempore non
+                    voluptatibus odio. Recusandae tempora unde aut!
+                  </div>
+                </div>
               </div>
             </div>
             <div className="carousel-item">
