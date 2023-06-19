@@ -51,8 +51,6 @@ export default class App extends Component {
           "toLeftA 1s forwards";
         document.getElementById("right-section").style.animation =
           "toRightA 1s forwards";
-        document.getElementById("certifications").style.animation =
-          "toLeftA 1s forwards";
         break;
       case "Contact":
         document.querySelector(".top-box h1").style.animation =
