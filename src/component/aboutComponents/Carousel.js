@@ -58,15 +58,15 @@ export default function Carousel({ getContent }) {
         element.classList.toggle("showed");
       }, 1000);
     } else {
-      [...document.getElementsByClassName("detail-items")].map(
-        (elm) => (elm.style.animation = "fadeInCD 1s forwards")
-      );
       element.style.top = `${
         target.getBoundingClientRect().top + window.scrollY
       }px`;
       element.style.left = `${
         target.getBoundingClientRect().left + window.scrollX
       }px`;
+      [...document.getElementsByClassName("detail-items")].map(
+        (elm) => (elm.style.animation = "fadeInCD 1s forwards")
+      );
       target.style.display = "none";
       element.style.animation = "grow 1s forwards";
       element.classList.toggle("showed");
