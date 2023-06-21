@@ -44,9 +44,11 @@ export default function Carousel({ getContent }) {
     const element = document.querySelector(".hidden-test");
     if (element.classList.contains("showed")) {
       element.style.animation = "growInverse 1s forwards";
-      [...document.getElementsByClassName("detail-items")].map(
-        (elm) => (elm.style.animation = "fadeOutCD 1s forwards")
-      );
+      element.style.webkitAnimation = "growInverse 1s forwards";
+      [...document.getElementsByClassName("detail-items")].map((elm) => {
+        elm.style.animation = "fadeOutCD 1s forwards";
+        elm.style.webkitAnimation = "fadeOutCD 1s forwards";
+      });
       setTimeout(() => {
         element.style.top = `${
           target.getBoundingClientRect().top + window.scrollY
@@ -64,11 +66,13 @@ export default function Carousel({ getContent }) {
       element.style.left = `${
         target.getBoundingClientRect().left + window.scrollX
       }px`;
-      [...document.getElementsByClassName("detail-items")].map(
-        (elm) => (elm.style.animation = "fadeInCD 1s forwards")
-      );
+      [...document.getElementsByClassName("detail-items")].map((elm) => {
+        elm.style.animation = "fadeInCD 1s forwards";
+        elm.style.webkitAnimation = "fadeOutCD 1s forwards";
+      });
       target.style.display = "none";
       element.style.animation = "grow 1s forwards";
+      element.style.webkitAnimation = "grow 1s forwards";
       element.classList.toggle("showed");
     }
   };
