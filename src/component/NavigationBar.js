@@ -6,12 +6,8 @@ export default class NavigationBar extends Component {
     return (
       <nav className="navbar navbar-expand-lg bg-custom" data-bs-theme="dark">
         <div className="container d-flex">
-          <a
-            className="navbar-brand txt-orange"
-            href="#"
-            onClick={this.props.changePage}
-          >
-            Irfansud's Website
+          <a className="navbar-brand " href="#" onClick={this.props.changePage}>
+            sudDevelopment
           </a>
           <button
             className="navbar-toggler"

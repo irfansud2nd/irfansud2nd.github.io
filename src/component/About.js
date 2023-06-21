@@ -33,7 +33,7 @@ export default function About() {
     setImgIndex(i);
   };
   return (
-    <div className="container py-auto" id="about">
+    <div className="container" id="about">
       <div className="hidden-test">
         <button
           className="detail-items"
@@ -44,15 +44,15 @@ export default function About() {
         >
           X
         </button>
-        <div className="detail-items">Detail</div>
+        <div className="detail-items mt-4">Detail</div>
         <div
-          className="row align-items-center w-100 p-2 detail-items"
+          className="row align-items-center w-100 p-2 detail-items mh-100"
           id="detail-content"
         >
-          <div className="col-md-4">
+          <div className="col-md-4 ">
             <img
               src={imgCollection[imgIndex]}
-              className="h-100 mw-100 "
+              className="mh-100 mw-100"
               id="detail-img"
             />
           </div>
@@ -68,7 +68,7 @@ export default function About() {
             <a
               href={data.visit}
               target="_blank"
-              className="button-visit badge "
+              className="button-visit badge mb-2"
             >
               Visit
             </a>
@@ -87,14 +87,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div
-        className="row"
-        style={
-          {
-            // border: "1px solid yellow",
-          }
-        }
-      >
+      <div className="row">
         <div
           className="col-lg-4 d-flex flex-column justify-content-between"
           id="left-section"

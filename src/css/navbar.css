@@ -1,13 +1,23 @@
-.bg-custom{
-    background-color: #161616 !important;
-    box-shadow: 0px 1px 5px rgba(255, 255, 255, .5) !important;
+@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
+.bg-custom {
+  background-color: #161616 !important;
+  box-shadow: 0px 1px 5px rgba(255, 255, 255, 0.5) !important;
 }
 
-.nav-link, .navbar-brand{
-    color: #93DEFF !important;
+.nav-link,
+.navbar-brand {
+  color: #93deff !important;
+}
+
+.navbar-brand {
+  font-family: "Leckerli One", cursive;
+  color: black !important;
+  background-color: #93deff;
+  padding: 0 10px;
+  border-radius: 10px;
 }
 
 .nav-link:hover,
-.navbar-brand:hover{
-    text-shadow: 0px 0px 2px rgba(255, 255, 255, .8);
+.navbar-brand:hover {
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8);
 }
