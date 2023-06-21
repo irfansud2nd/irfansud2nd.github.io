@@ -2,32 +2,33 @@ import React from "react";
 import pomodoro from "../../img/pomodoro.png";
 import calculator from "../../img/calculator.png";
 import numbers from "../../img/4numbers.png";
+import calculatorDetail from "../../img/calculator-detail.png";
 import "../../css/carousel-detail.css";
 
 export default function Carousel({ getContent }) {
   const detailContent = [
     {
       id: "detail-calculator",
-      img: "cd",
+      img: "calculatorDetail",
       detail:
-        "ini adalah detail dari project calculator,Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam laboriosam nam sapiente beatae asperiores a tempora atque possimus. Deserunt quidem explicabo at, nihil totam dolores reiciendis officiis recusandae distinctio ea libero adipisci repellat eum laboriosam? Adipisci aut, id sapiente ad explicabo numquam, distinctio ducimus nihil tempore illum sunt? Adipisci, repudiandae?",
-      techStack: ["react", "vanilla CSS"],
-      visit: "https://codepen.io/irfansud2nd/pen/yLQLEZp",
+        "This is a project that i built to complete the react development course from freeCodeCamp. It is built on React and have passed all the requirements demanded by freeCodeCamp, like negative number math operations, replacing operator. you can see the full requirements on codepen, just click visit button below. ",
+      techStack: ["React", "Vanilla CSS"],
+      visit: "https://codepen.io/irfansud2nd/pen/QWZXJVL",
     },
     {
       id: "detail-pomodoro",
       img: "pomodoroDetail",
       detail:
-        "ini adalah detail dari project pomodoro,Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam laboriosam nam sapiente beatae asperiores a tempora atque possimus. Deserunt quidem explicabo at, nihil totam dolores reiciendis officiis recusandae distinctio ea libero adipisci repellat eum laboriosam? Adipisci aut, id sapiente ad explicabo numquam, distinctio ducimus nihil tempore illum sunt? Adipisci, repudiandae?",
-      techStack: ["react", "vanilla CSS"],
-      visit: "https://codepen.io/irfansud2nd/details/PoxoaRq",
+        "This is a project that i built to complete the react development course from freeCodeCamp. This app helps you to implement the pomodoro technique, a technique to increase your producivity by taking short break periodically. It is built on React and have passed all the requirements demanded by freeCodeCamp, this project is using React Hook to change the state every second for countdown timer. you can see the full requirements on codepen, just click visit button below.",
+      techStack: ["React", "Vanilla CSS"],
+      visit: "https://codepen.io/irfansud2nd/pen/oNaKebd",
     },
     {
       id: "detail-numbers",
       img: "numbersDetail",
       detail:
-        "ini adalah detail dari project numbers,Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam laboriosam nam sapiente beatae asperiores a tempora atque possimus. Deserunt quidem explicabo at, nihil totam dolores reiciendis officiis recusandae distinctio ea libero adipisci repellat eum laboriosam? Adipisci aut, id sapiente ad explicabo numquam, distinctio ducimus nihil tempore illum sunt? Adipisci, repudiandae?",
-      techStack: ["vanilla JS", "vanilla CSS"],
+        "This is a simple game project that i built because i like to play this kind of game. In this game you need to guess a 4 numbers combination, the combination consists 4 different numbers, the games just gonna give you 2 clues which is correct number and correct position. you can read the full tutorial and try to play the game.",
+      techStack: ["Vanilla JS", "Vanilla CSS"],
       visit: "https://irfansud2nd.github.io/guess-the-4-numbers/",
       repo: "https://github.com/irfansud2nd/guess-the-4-numbers",
     },
@@ -100,6 +101,19 @@ export default function Carousel({ getContent }) {
           </div>
           <div className="carousel-inner">
             <div className="carousel-item active">
+              <img src={numbers} className="d-block w-100" alt="..." />
+              <div className="carousel-caption">
+                <h5 style={{ marginBottom: "5px" }}>Guess The 4 Numbers</h5>
+                <button
+                  className="button-detail"
+                  id="detail-numbers"
+                  onClick={showHidden}
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+            <div className="carousel-item">
               <img src={calculator} className="d-block w-100" alt="..." />
               <div className="carousel-caption">
                 <h5 style={{ marginBottom: "5px" }}>React Calculator</h5>
@@ -119,19 +133,6 @@ export default function Carousel({ getContent }) {
                 <button
                   className="button-detail"
                   id="detail-pomodoro"
-                  onClick={showHidden}
-                >
-                  Detail
-                </button>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <img src={numbers} className="d-block w-100" alt="..." />
-              <div className="carousel-caption">
-                <h5 style={{ marginBottom: "5px" }}>Guess The 4 Numbers</h5>
-                <button
-                  className="button-detail"
-                  id="detail-numbers"
                   onClick={showHidden}
                 >
                   Detail

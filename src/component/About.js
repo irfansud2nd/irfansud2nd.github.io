@@ -44,7 +44,9 @@ export default function About() {
         >
           X
         </button>
-        <div className="detail-items mt-4">Detail</div>
+        <div className="detail-items mt-4" id="detail-title">
+          Detail
+        </div>
         <div
           className="row align-items-center w-100 p-2 detail-items mh-100"
           id="detail-content"
