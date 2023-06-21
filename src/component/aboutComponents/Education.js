@@ -8,7 +8,6 @@ export default function Education() {
       <div className="row">
         <div className="d-flex">
           <img
-            style={{ marginLeft: "-15px" }}
             alt="logo-polman"
             src={logoPolman}
             className="section-img mr-5"

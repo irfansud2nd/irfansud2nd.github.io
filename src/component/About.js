@@ -1,38 +1,100 @@
-import React from "react";
+import React, { useState } from "react";
 import "./../css/about.css";
 import Carousel from "./aboutComponents/Carousel";
 import Skills from "./aboutComponents/Skills";
 import Certifications from "./aboutComponents/Certifications";
 import AboutMe from "./aboutComponents/AboutMe";
 import Education from "./aboutComponents/Education";
-import podomoro from "../img/podomoro.png";
+import calculatorDetail from "../img/calculator-detail.png";
+import pomodoroDetail from "../img/pomodoro-detail.png";
+import numbersDetail from "../img/4numbers-detail.png";
 
 export default function About() {
-  const hideDetail = () => {
-    document.getElementById("detail-podomoro").click();
+  window.onclick = (event) => {
+    if (
+      !event.target.closest(".hidden-test") &&
+      data !== 0 &&
+      event.target.className !== "button-detail"
+    ) {
+      document.getElementById("detail-close").click();
+    }
+  };
+  const [data, setData] = useState(0);
+  const [imgIndex, setImgIndex] = useState("");
+
+  const imgCollection = [calculatorDetail, pomodoroDetail, numbersDetail];
+
+  const hideDetail = (id) => {
+    document.getElementById(id).click();
+    setData(0);
+  };
+  const getContent = (data, i) => {
+    setData(data);
+    setImgIndex(i);
   };
   return (
-    <div className="container mt-1" id="about">
+    <div className="container py-auto" id="about">
       <div className="hidden-test">
-        Detail
-        <div className="row align-items-center h-100" id="detail-content">
+        <button
+          className="detail-items"
+          id="detail-close"
+          onClick={() => {
+            hideDetail(data.id);
+          }}
+        >
+          X
+        </button>
+        <div className="detail-items">Detail</div>
+        <div
+          className="row align-items-center w-100 p-2 detail-items"
+          id="detail-content"
+        >
           <div className="col-md-4">
-            <img src={podomoro} className="w-100" onClick={hideDetail} />
+            <img
+              src={imgCollection[imgIndex]}
+              className="h-100 mw-100 "
+              id="detail-img"
+            />
           </div>
           <div className="col-md-8">
+            <p className=" text-justify">{data.detail}</p>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint
-              natus ipsam recusandae saepe adipisci, culpa labore quae tenetur!
-              Veniam neque quos, architecto voluptates perspiciatis qui
-              consectetur iure sunt deserunt quae blanditiis, pariatur vero rem
-              amet ducimus quibusdam debitis doloribus maiores recusandae,
-              nostrum doloremque deleniti. Tenetur quos in reprehenderit eaque
-              consequuntur.
+              {data.techStack
+                ? data.techStack.map((item) => {
+                    return <span className="tech-stack ">{item}</span>;
+                  })
+                : ""}
             </p>
+            <a
+              href={data.visit}
+              target="_blank"
+              className="button-visit badge "
+            >
+              Visit
+            </a>
+            {data.repo ? (
+              <a
+                href={data.repo}
+                target="_blank"
+                className="button-visit badge "
+                style={{ marginLeft: "5px" }}
+              >
+                Repo
+              </a>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>
-      <div className="row">
+      <div
+        className="row"
+        style={
+          {
+            // border: "1px solid yellow",
+          }
+        }
+      >
         <div
           className="col-lg-4 d-flex flex-column justify-content-between"
           id="left-section"
@@ -45,7 +107,7 @@ export default function About() {
           className="col-lg-8 d-flex flex-column justify-content-between"
           id="right-section"
         >
-          <Carousel />
+          <Carousel getContent={getContent} />
           <Skills />
         </div>
       </div>

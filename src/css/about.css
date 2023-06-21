@@ -23,17 +23,18 @@ body {
 
 #about {
   color: #f7f7f7;
-  min-height: 91vh;
-  align-items: center;
-  justify-content: center;
-  overflow-x: hidden;
+  min-height: 90vh;
+}
+
+#about > .row {
+  margin: 10px auto !important;
 }
 
 .section-img {
   object-fit: contain;
   width: 50px;
   height: 50px;
-  margin-left: -5px;
+  margin-left: -15px;
   margin-right: 10px;
 }
 
@@ -53,12 +54,6 @@ body {
 }
 
 .button-cv {
-  background-color: #93deff;
-  color: #1a1a1a;
-  text-decoration: none;
-}
-
-.button-visit {
   background-color: #93deff;
   color: #1a1a1a;
   text-decoration: none;

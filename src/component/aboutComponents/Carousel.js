@@ -1,15 +1,51 @@
 import React from "react";
-import podomoro from "../../img/podomoro.png";
+import pomodoro from "../../img/pomodoro.png";
 import calculator from "../../img/calculator.png";
 import numbers from "../../img/4numbers.png";
 import "../../css/carousel-detail.css";
 
-export default function Carousel() {
+export default function Carousel({ getContent }) {
+  const detailContent = [
+    {
+      id: "detail-calculator",
+      img: "cd",
+      detail:
+        "ini adalah detail dari project calculator,Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam laboriosam nam sapiente beatae asperiores a tempora atque possimus. Deserunt quidem explicabo at, nihil totam dolores reiciendis officiis recusandae distinctio ea libero adipisci repellat eum laboriosam? Adipisci aut, id sapiente ad explicabo numquam, distinctio ducimus nihil tempore illum sunt? Adipisci, repudiandae?",
+      techStack: ["react", "vanilla CSS"],
+      visit: "https://codepen.io/irfansud2nd/pen/yLQLEZp",
+    },
+    {
+      id: "detail-pomodoro",
+      img: "pomodoroDetail",
+      detail:
+        "ini adalah detail dari project pomodoro,Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam laboriosam nam sapiente beatae asperiores a tempora atque possimus. Deserunt quidem explicabo at, nihil totam dolores reiciendis officiis recusandae distinctio ea libero adipisci repellat eum laboriosam? Adipisci aut, id sapiente ad explicabo numquam, distinctio ducimus nihil tempore illum sunt? Adipisci, repudiandae?",
+      techStack: ["react", "vanilla CSS"],
+      visit: "https://codepen.io/irfansud2nd/details/PoxoaRq",
+    },
+    {
+      id: "detail-numbers",
+      img: "numbersDetail",
+      detail:
+        "ini adalah detail dari project numbers,Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam laboriosam nam sapiente beatae asperiores a tempora atque possimus. Deserunt quidem explicabo at, nihil totam dolores reiciendis officiis recusandae distinctio ea libero adipisci repellat eum laboriosam? Adipisci aut, id sapiente ad explicabo numquam, distinctio ducimus nihil tempore illum sunt? Adipisci, repudiandae?",
+      techStack: ["vanilla JS", "vanilla CSS"],
+      visit: "https://irfansud2nd.github.io/guess-the-4-numbers/",
+      repo: "https://github.com/irfansud2nd/guess-the-4-numbers",
+    },
+  ];
   const showHidden = (event) => {
+    getContent(
+      detailContent[
+        detailContent.findIndex((elm) => elm.id === event.currentTarget.id)
+      ],
+      detailContent.findIndex((elm) => elm.id === event.currentTarget.id)
+    );
     const target = document.getElementById(event.currentTarget.id);
     const element = document.querySelector(".hidden-test");
     if (element.classList.contains("showed")) {
       element.style.animation = "growInverse 1s forwards";
+      [...document.getElementsByClassName("detail-items")].map(
+        (elm) => (elm.style.animation = "fadeOutCD 1s forwards")
+      );
       setTimeout(() => {
         element.style.top = `${
           target.getBoundingClientRect().top + window.scrollY
@@ -21,6 +57,9 @@ export default function Carousel() {
         element.classList.toggle("showed");
       }, 1000);
     } else {
+      [...document.getElementsByClassName("detail-items")].map(
+        (elm) => (elm.style.animation = "fadeInCD 1s forwards")
+      );
       element.style.top = `${
         target.getBoundingClientRect().top + window.scrollY
       }px`;
@@ -32,7 +71,6 @@ export default function Carousel() {
       element.classList.toggle("showed");
     }
   };
-  window.onresize = console.log("ok");
   return (
     <div>
       <h4 className="mb-3 section-title">Portfolio</h4>
@@ -65,63 +103,39 @@ export default function Carousel() {
               <img src={calculator} className="d-block w-100" alt="..." />
               <div className="carousel-caption">
                 <h5 style={{ marginBottom: "5px" }}>React Calculator</h5>
-                <a
-                  href="https://codepen.io/irfansud2nd/pen/yLQLEZp"
-                  target="_blank"
-                  className="button-visit badge"
+                <button
+                  className="button-detail"
+                  id="detail-calculator"
+                  onClick={showHidden}
                 >
-                  Visit on Codepen
-                </a>
+                  Detail
+                </button>
               </div>
             </div>
             <div className="carousel-item">
-              <img src={podomoro} className="d-block w-100" alt="..." />
+              <img src={pomodoro} className="d-block w-100" alt="..." />
               <div className="carousel-caption">
-                <h5 style={{ marginBottom: "5px" }}>React Podomoro Timer</h5>
-                {/* <a
-                  href="https://codepen.io/irfansud2nd/details/PoxoaRq"
-                  target="_blank"
-                  className="button-visit badge"
-                >
-                  Visit on Codepen
-                </a> */}
-                <div
+                <h5 style={{ marginBottom: "5px" }}>React Pomodoro Timer</h5>
+                <button
                   className="button-detail"
-                  id="detail-podomoro"
+                  id="detail-pomodoro"
                   onClick={showHidden}
                 >
-                  <div className="show">Detail</div>
-                  <div className="hidden">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
-                    cumque vel nihil dolorum veniam? Harum reiciendis, provident
-                    voluptas magnam distinctio nulla dolorem quasi corporis
-                    obcaecati perspiciatis praesentium voluptatibus quia facilis
-                    rem accusantium magni ad ipsum esse optio consequuntur
-                    assumenda beatae suscipit! Praesentium tempore non
-                    voluptatibus odio. Recusandae tempora unde aut!
-                  </div>
-                </div>
+                  Detail
+                </button>
               </div>
             </div>
             <div className="carousel-item">
               <img src={numbers} className="d-block w-100" alt="..." />
               <div className="carousel-caption">
                 <h5 style={{ marginBottom: "5px" }}>Guess The 4 Numbers</h5>
-                <a
-                  href="https://irfansud2nd.github.io/guess-the-4-numbers/"
-                  target="_blank"
-                  className="button-visit badge"
+                <button
+                  className="button-detail"
+                  id="detail-numbers"
+                  onClick={showHidden}
                 >
-                  Visit
-                </a>
-                <a
-                  href="https://github.com/irfansud2nd/guess-the-4-numbers"
-                  target="_blank"
-                  className="button-visit badge"
-                  style={{ marginLeft: "5px" }}
-                >
-                  Repo
-                </a>
+                  Detail
+                </button>
               </div>
             </div>
           </div>

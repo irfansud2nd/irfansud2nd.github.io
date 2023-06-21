@@ -2,7 +2,7 @@ import React from "react";
 import logoHtml from "../../img/logo-html.png";
 import logoCss from "../../img/logo-css.png";
 import logoBootstrap from "../../img/logo-bootstrap.png";
-import logoSass from "../../img/logo-sass1.png";
+import logoSass from "../../img/logo-sass.png";
 import logoJs from "../../img/logo-js.png";
 import logoNodejs from "../../img/logo-nodejs.png";
 import logoReact from "../../img/logo-react.png";

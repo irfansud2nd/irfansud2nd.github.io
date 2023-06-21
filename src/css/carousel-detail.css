@@ -1,15 +1,20 @@
 .button-detail {
-  display: block;
   background-color: #93deff;
-  color: white;
-  width: 60px;
-  height: 25px;
+  color: #1a1a1a;
+  border: none;
   margin: 0 auto;
-  padding: 3px 5px;
   border-radius: 5px;
   font-size: 0.8em;
+  font-weight: 600;
   cursor: pointer;
-  overflow: hidden;
+}
+
+.button-visit {
+  background-color: #93deff;
+  color: #1a1a1a;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 0.85rem;
 }
 
 .hidden-test {
@@ -27,13 +32,46 @@
   position: absolute;
   z-index: 2;
   text-align: center;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   overflow: hidden;
   animation: grow 1s forwards;
 }
 
+.detail-items {
+  opacity: 0;
+  animation: fadeInCD 1s forwards;
+}
+
 #detail-content p {
   font-size: 1rem;
+  text-align: justify;
+}
+
+#detail-img {
+  border-radius: 5px;
+}
+
+.tech-stack {
+  border: 2px solid #93deff;
+  margin-right: 10px;
+  padding: 0 10px 4px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+#detail-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  color: rgb(255, 68, 68);
+  border: 2px solid #616571;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 25%;
 }
 
 @keyframes grow {
@@ -53,18 +91,20 @@
     bottom: 50%;
     left: 50%;
     width: 70vw;
-    height: 70vh;
+    min-height: 70vh;
+    height: fit-content;
     transform: translate(-50%, -60%);
   }
   100% {
     font-size: 1.3em;
     background-color: #1a1a1a;
     border: 3px solid #93deff;
-    display: grid;
+    display: flex;
     bottom: 50%;
     left: 50%;
     width: 70vw;
-    height: 70vh;
+    min-height: 70vh;
+    height: fit-content;
     transform: translate(-50%, -60%);
   }
 }
@@ -90,18 +130,43 @@
     bottom: 50%;
     left: 50%;
     width: 70vw;
-    height: 70vh;
+    min-height: 70vh;
+    height: fit-content;
     transform: translate(-50%, -60%);
   }
   0% {
     font-size: 1.3em;
     background-color: #1a1a1a;
     border: 3px solid #93deff;
-    display: grid;
+    display: flex;
     bottom: 50%;
     left: 50%;
     width: 70vw;
-    height: 70vh;
+    min-height: 70vh;
+    height: fit-content;
     transform: translate(-50%, -60%);
+  }
+}
+
+@keyframes fadeInCD {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutCD {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
