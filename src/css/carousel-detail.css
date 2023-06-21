@@ -37,7 +37,7 @@
   align-items: center;
   flex-direction: column;
   animation: grow 1s forwards;
-  -webkit-animation: grow 1s forwards;
+  -webkit-animation: growWK 1s forwards;
   padding-bottom: 15px;
 }
 
@@ -50,7 +50,7 @@
 .detail-items {
   opacity: 0;
   animation: fadeInCD 1s forwards;
-  -webkit-animation: fadeInCD 1s forwards;
+  -webkit-animation: fadeInCDWK 1s forwards;
 }
 
 #detail-content p {
@@ -187,7 +187,7 @@
   }
 }
 
-@-webkit-keyframes grow {
+@-webkit-keyframes growWK {
   0% {
     width: 46px;
     height: 21px;
@@ -225,7 +225,7 @@
   }
 }
 
-@-webkit-keyframes growInverse {
+@-webkit-keyframes growInverseWK {
   100% {
     width: 46px;
     height: 21px;
@@ -268,7 +268,7 @@
   }
 }
 
-@-webkit-keyframes fadeInCD {
+@-webkit-keyframes fadeInCDWK {
   0% {
     opacity: 0;
   }
@@ -279,7 +279,7 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes fadeOutCD {
+@-webkit-keyframes fadeOutCDWK {
   0% {
     opacity: 1;
   }
