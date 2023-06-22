@@ -50,12 +50,6 @@ export default function Carousel({ getContent }) {
         elm.style.animation = "fadeOutCD 1s forwards";
       });
       setTimeout(() => {
-        element.style.top = `${
-          target.getBoundingClientRect().top + window.scrollY
-        }px`;
-        element.style.left = `${
-          target.getBoundingClientRect().left + window.scrollX
-        }px`;
         target.style.display = "block";
         element.classList.toggle("showed");
       }, 1000);
