@@ -45,7 +45,7 @@ export default function Carousel({ getContent }) {
     const ref = document.getElementById("about");
     if (element.classList.contains("showed")) {
       element.style.animation = "growInverse 1s forwards";
-      element.style["-webkit-transform"] = "growInverse 1s forwards";
+      // element.style["-webkit-transform"] = "growInverse 1s forwards";
       [...document.getElementsByClassName("detail-items")].map((elm) => {
         elm.style.animation = "fadeOutCD 1s forwards";
       });
@@ -68,7 +68,7 @@ export default function Carousel({ getContent }) {
       });
       target.style.display = "none";
       element.style.animation = "grow 1s forwards";
-      element.style["-webkit-transform"] = "grow 1s forwards";
+      // element.style["-webkit-transform"] = "grow 1s forwards";
       element.classList.toggle("showed");
     }
   };

@@ -37,7 +37,7 @@
   align-items: center;
   flex-direction: column;
   animation: grow 1s forwards;
-  -webkit-animation: grow 1s forwards;
+  /* -webkit-animation: grow 1s forwards; */
   padding-bottom: 15px;
 }
 
