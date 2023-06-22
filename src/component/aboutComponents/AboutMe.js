@@ -11,7 +11,7 @@ export default function AboutMe() {
         opportunity to present my skills and gain new knowledge in a profesional
         career. &nbsp;
         <a
-          href="https://drive.google.com/file/d/1nLa4hx7Qy2J5MwA-zrYj0lY5DDqkhh3o/view?usp=sharing"
+          href="https://drive.google.com/file/d/1C_jox5iK-l2pp8MWZOOCs6vI0lB4ZMqp/view?usp=sharing"
           target="_blank"
           className="button-cv badge"
         >
