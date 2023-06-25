@@ -8,6 +8,7 @@ import Education from "./aboutComponents/Education";
 import calculatorDetail from "../img/calculator-detail.png";
 import pomodoroDetail from "../img/pomodoro-detail.png";
 import numbersDetail from "../img/4numbers-detail.png";
+import sudGarageDetail from "../img/sudGarage-detail.png";
 
 export default function About() {
   window.onclick = (event) => {
@@ -22,7 +23,12 @@ export default function About() {
   const [data, setData] = useState(0);
   const [imgIndex, setImgIndex] = useState("");
 
-  const imgCollection = [calculatorDetail, pomodoroDetail, numbersDetail];
+  const imgCollection = [
+    calculatorDetail,
+    pomodoroDetail,
+    numbersDetail,
+    sudGarageDetail,
+  ];
 
   const hideDetail = (id) => {
     document.getElementById(id).click();

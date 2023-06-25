@@ -2,7 +2,7 @@ import React from "react";
 import pomodoro from "../../img/pomodoro.png";
 import calculator from "../../img/calculator.png";
 import numbers from "../../img/4numbers.png";
-import calculatorDetail from "../../img/calculator-detail.png";
+import sudGarage from "../../img/sudGarage.png";
 import "../../css/carousel-detail.css";
 
 export default function Carousel({ getContent }) {
@@ -32,6 +32,14 @@ export default function Carousel({ getContent }) {
       visit: "https://irfansud2nd.github.io/guess-the-4-numbers/",
       repo: "https://github.com/irfansud2nd/guess-the-4-numbers",
     },
+    {
+      id: "detail-sudGarage",
+      img: "sudGarageDetail",
+      detail: "This is a simple landing page with a littel animation",
+      techStack: ["Vanilla JS", "Vanilla CSS"],
+      visit: "https://irfansud2nd.github.io/sud-garage/",
+      repo: "https://github.com/irfansud2nd/sud-garage",
+    },
   ];
   const showHidden = (event) => {
     getContent(
@@ -45,7 +53,6 @@ export default function Carousel({ getContent }) {
     const ref = document.getElementById("about");
     if (element.classList.contains("showed")) {
       element.style.animation = "growInverse 1s forwards";
-      // element.style["-webkit-transform"] = "growInverse 1s forwards";
       [...document.getElementsByClassName("detail-items")].map((elm) => {
         elm.style.animation = "fadeOutCD 1s forwards";
       });
@@ -68,7 +75,6 @@ export default function Carousel({ getContent }) {
       });
       target.style.display = "none";
       element.style.animation = "grow 1s forwards";
-      // element.style["-webkit-transform"] = "grow 1s forwards";
       element.classList.toggle("showed");
     }
   };
@@ -97,6 +103,12 @@ export default function Carousel({ getContent }) {
               data-bs-target="#carouselExampleCaptions"
               data-bs-slide-to="2"
               aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
             ></button>
           </div>
           <div className="carousel-inner">
@@ -133,6 +145,19 @@ export default function Carousel({ getContent }) {
                 <button
                   className="button-detail"
                   id="detail-pomodoro"
+                  onClick={showHidden}
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+            <div className="carousel-item">
+              <img src={sudGarage} className="d-block w-100" alt="..." />
+              <div className="carousel-caption">
+                <h5 style={{ marginBottom: "5px" }}>sudGarage</h5>
+                <button
+                  className="button-detail"
+                  id="detail-sudGarage"
                   onClick={showHidden}
                 >
                   Detail
