@@ -126,6 +126,19 @@ export default function Carousel({ getContent }) {
               </div>
             </div>
             <div className="carousel-item">
+              <img src={sudGarage} className="d-block w-100" alt="..." />
+              <div className="carousel-caption">
+                <h5 style={{ marginBottom: "5px" }}>sudGarage</h5>
+                <button
+                  className="button-detail"
+                  id="detail-sudGarage"
+                  onClick={showHidden}
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+            <div className="carousel-item">
               <img src={calculator} className="d-block w-100" alt="..." />
               <div className="carousel-caption">
                 <h5 style={{ marginBottom: "5px" }}>React Calculator</h5>
@@ -145,19 +158,6 @@ export default function Carousel({ getContent }) {
                 <button
                   className="button-detail"
                   id="detail-pomodoro"
-                  onClick={showHidden}
-                >
-                  Detail
-                </button>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <img src={sudGarage} className="d-block w-100" alt="..." />
-              <div className="carousel-caption">
-                <h5 style={{ marginBottom: "5px" }}>sudGarage</h5>
-                <button
-                  className="button-detail"
-                  id="detail-sudGarage"
                   onClick={showHidden}
                 >
                   Detail
