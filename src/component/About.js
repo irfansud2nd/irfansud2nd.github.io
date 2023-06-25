@@ -60,13 +60,13 @@ export default function About() {
           </div>
           <div className="col-md-8">
             <p className=" text-justify">{data.detail}</p>
-            <p>
+            <div className="d-flex">
               {data.techStack
                 ? data.techStack.map((item) => {
-                    return <span className="tech-stack ">{item}</span>;
+                    return <p className="tech-stack">{item}</p>;
                   })
                 : ""}
-            </p>
+            </div>
             <a
               href={data.visit}
               target="_blank"
