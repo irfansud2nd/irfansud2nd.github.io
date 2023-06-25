@@ -1,7 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.b644aec5.css",
-    "main.js": "/static/js/main.edc2a4aa.js",
+    "main.js": "/static/js/main.fad2f2c1.js",
+    "static/media/sudGarage.png": "/static/media/sudGarage.c4fe033deb39b5e6a9b5.png",
+    "static/media/sudGarage-detail.png": "/static/media/sudGarage-detail.39bcf04debb8787b4473.png",
     "static/media/profile.png": "/static/media/profile.e470139ad2cca8f82485.png",
     "static/media/logo-react.png": "/static/media/logo-react.65ca18b4e9841f85a691.png",
     "static/media/logo-bootstrap.png": "/static/media/logo-bootstrap.36241e83375e5009aaeb.png",
@@ -18,10 +20,10 @@
     "static/media/calculator-detail.png": "/static/media/calculator-detail.539c25267a9b0da9e245.png",
     "index.html": "/index.html",
     "main.b644aec5.css.map": "/static/css/main.b644aec5.css.map",
-    "main.edc2a4aa.js.map": "/static/js/main.edc2a4aa.js.map"
+    "main.fad2f2c1.js.map": "/static/js/main.fad2f2c1.js.map"
   },
   "entrypoints": [
     "static/css/main.b644aec5.css",
-    "static/js/main.edc2a4aa.js"
+    "static/js/main.fad2f2c1.js"
   ]
 }
