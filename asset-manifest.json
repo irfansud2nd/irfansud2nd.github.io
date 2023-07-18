@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.b644aec5.css",
-    "main.js": "/static/js/main.fad2f2c1.js",
-    "static/media/sudGarage.png": "/static/media/sudGarage.c4fe033deb39b5e6a9b5.png",
+    "main.css": "/static/css/main.d8587cac.css",
+    "main.js": "/static/js/main.10c4bbcf.js",
     "static/media/sudGarage-detail.png": "/static/media/sudGarage-detail.39bcf04debb8787b4473.png",
+    "static/media/sudGarage.png": "/static/media/sudGarage.294f5577b9cdc329da65.png",
+    "static/media/custom-kit-detail.png": "/static/media/custom-kit-detail.16665fe95359367a91d6.png",
     "static/media/profile.png": "/static/media/profile.e470139ad2cca8f82485.png",
     "static/media/logo-react.png": "/static/media/logo-react.65ca18b4e9841f85a691.png",
+    "static/media/custom-kit.png": "/static/media/custom-kit.3998334f73fe12f390ec.png",
     "static/media/logo-bootstrap.png": "/static/media/logo-bootstrap.36241e83375e5009aaeb.png",
     "static/media/logo-css.png": "/static/media/logo-css.4a7b205dee5eb629955e.png",
     "static/media/logo-html.png": "/static/media/logo-html.d71bdf881536870443f6.png",
     "static/media/logo-nodejs.png": "/static/media/logo-nodejs.c2e22c634a7336cbe298.png",
     "static/media/logo-js.png": "/static/media/logo-js.d93ad41d282f228077d1.png",
+    "static/media/logo-tailwind.png": "/static/media/logo-tailwind.d2a8b7891edbea80585c.png",
     "static/media/logo-polman.png": "/static/media/logo-polman.53f1092f6737aeb07d0d.png",
     "static/media/4numbers.png": "/static/media/4numbers.804339ff5d6b25a4ad1e.png",
     "static/media/4numbers-detail.png": "/static/media/4numbers-detail.4673f158abbb9f97e578.png",
@@ -19,11 +22,11 @@
     "static/media/logo-firebase.png": "/static/media/logo-firebase.07a9c095ce9378f05a73.png",
     "static/media/calculator-detail.png": "/static/media/calculator-detail.539c25267a9b0da9e245.png",
     "index.html": "/index.html",
-    "main.b644aec5.css.map": "/static/css/main.b644aec5.css.map",
-    "main.fad2f2c1.js.map": "/static/js/main.fad2f2c1.js.map"
+    "main.d8587cac.css.map": "/static/css/main.d8587cac.css.map",
+    "main.10c4bbcf.js.map": "/static/js/main.10c4bbcf.js.map"
   },
   "entrypoints": [
-    "static/css/main.b644aec5.css",
-    "static/js/main.fad2f2c1.js"
+    "static/css/main.d8587cac.css",
+    "static/js/main.10c4bbcf.js"
   ]
 }
