@@ -3,6 +3,7 @@ import pomodoro from "../../img/pomodoro.png";
 import calculator from "../../img/calculator.png";
 import numbers from "../../img/4numbers.png";
 import sudGarage from "../../img/sudGarage.png";
+import customKit from "../../img/custom-kit.png";
 import "../../css/carousel-detail.css";
 
 export default function Carousel({ getContent }) {
@@ -35,10 +36,19 @@ export default function Carousel({ getContent }) {
     {
       id: "detail-sudGarage",
       img: "sudGarageDetail",
-      detail: "This is a simple landing page with a littel animation",
+      detail: "This is a simple landing page with a litte bit of animation",
       techStack: ["Vanilla JS", "Vanilla CSS"],
       visit: "https://irfansud2nd.github.io/sud-garage/",
       repo: "https://github.com/irfansud2nd/sud-garage",
+    },
+    {
+      id: "detail-customKit",
+      img: "customKitDetail",
+      detail:
+        "This is a landing page, the desigin is inspired from eat-curios.com, and the content is from Custom Kit by Katros Garage",
+      techStack: ["React JS", "Tailwind CSS", "React Router"],
+      visit: "https://irfansud2nd.github.io/custom-kit/",
+      repo: "https://github.com/irfansud2nd/custom-kit",
     },
   ];
   const showHidden = (event) => {
@@ -96,6 +106,7 @@ export default function Carousel({ getContent }) {
               type="button"
               data-bs-target="#carouselExampleCaptions"
               data-bs-slide-to="1"
+              aria-current="true"
               aria-label="Slide 2"
             ></button>
             <button
@@ -110,15 +121,21 @@ export default function Carousel({ getContent }) {
               data-bs-slide-to="3"
               aria-label="Slide 4"
             ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
           </div>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src={numbers} className="d-block w-100" alt="..." />
+              <img src={customKit} className="d-block w-100" alt="..." />
               <div className="carousel-caption">
-                <h5 style={{ marginBottom: "5px" }}>Guess The 4 Numbers</h5>
+                <h5 style={{ marginBottom: "5px" }}>Custom Kit</h5>
                 <button
                   className="button-detail"
-                  id="detail-numbers"
+                  id="detail-customKit"
                   onClick={showHidden}
                 >
                   Detail
@@ -132,6 +149,19 @@ export default function Carousel({ getContent }) {
                 <button
                   className="button-detail"
                   id="detail-sudGarage"
+                  onClick={showHidden}
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+            <div className="carousel-item">
+              <img src={numbers} className="d-block w-100" alt="..." />
+              <div className="carousel-caption">
+                <h5 style={{ marginBottom: "5px" }}>Guess The 4 Numbers</h5>
+                <button
+                  className="button-detail"
+                  id="detail-numbers"
                   onClick={showHidden}
                 >
                   Detail

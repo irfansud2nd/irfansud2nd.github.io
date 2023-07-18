@@ -30,7 +30,8 @@ export default class Contact extends Component {
               </a>
             </div>
             <a
-              href=""
+              href="https://github.com/irfansud2nd/irfansud2nd.github.io"
+              target="_blank"
               className="badge visit-bottom mt-1 d-flex justify-content-center"
             >
               Visit repo of this website

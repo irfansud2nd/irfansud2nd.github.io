@@ -9,6 +9,7 @@ import calculatorDetail from "../img/calculator-detail.png";
 import pomodoroDetail from "../img/pomodoro-detail.png";
 import numbersDetail from "../img/4numbers-detail.png";
 import sudGarageDetail from "../img/sudGarage-detail.png";
+import customKitDetail from "../img/custom-kit-detail.png";
 
 export default function About() {
   window.onclick = (event) => {
@@ -28,6 +29,7 @@ export default function About() {
     pomodoroDetail,
     numbersDetail,
     sudGarageDetail,
+    customKitDetail,
   ];
 
   const hideDetail = (id) => {
@@ -65,8 +67,8 @@ export default function About() {
             />
           </div>
           <div className="col-md-8">
-            <p className=" text-justify">{data.detail}</p>
-            <div className="d-flex">
+            <p className="text-justify">{data.detail}</p>
+            <div className="d-flex justify-content-center">
               {data.techStack
                 ? data.techStack.map((item) => {
                     return <p className="tech-stack">{item}</p>;

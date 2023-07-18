@@ -7,6 +7,7 @@ import logoJs from "../../img/logo-js.png";
 import logoNodejs from "../../img/logo-nodejs.png";
 import logoReact from "../../img/logo-react.png";
 import logoFirebase from "../../img/logo-firebase.png";
+import logoTailwind from "../../img/logo-tailwind.png";
 import "./../../css/skills.css";
 
 export default function Skills() {
@@ -23,6 +24,9 @@ export default function Skills() {
           </div>
           <div className="slide">
             <img src={logoJs} alt="Logo JS" />
+          </div>
+          <div className="slide">
+            <img src={logoTailwind} alt="Logo Firebase" />
           </div>
           <div className="slide">
             <img src={logoBootstrap} alt="Logo Bootstrap" />
@@ -48,6 +52,9 @@ export default function Skills() {
           </div>
           <div className="slide">
             <img src={logoJs} alt="Logo JS" />
+          </div>
+          <div className="slide">
+            <img src={logoTailwind} alt="Logo Firebase" />
           </div>
           <div className="slide">
             <img src={logoBootstrap} alt="Logo Bootstrap" />
