@@ -5,6 +5,7 @@ import "./App.css";
 import Home from "./component/Home";
 import About from "./component/About";
 import Contact from "./component/Contact";
+import Redirect from "./component/Redirect";
 
 let timer;
 
@@ -84,6 +85,7 @@ export default class App extends Component {
     return (
       <React.Fragment>
         <NavigationBar changePage={this.changePage} />
+        <Redirect />
         <div className="content">{content}</div>
       </React.Fragment>
     );
